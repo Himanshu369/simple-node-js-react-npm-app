@@ -26,9 +26,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm -g config set user $USER
-    - run: npm i
-    - run: npm run start
-    - run: npm run build
-    - run: npm run test
-    - run: npm run eject
+    - run: npm ci
+    - run: npm test
